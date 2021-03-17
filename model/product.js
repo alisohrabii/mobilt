@@ -5,28 +5,46 @@ const productSchema = mongoose.Schema({
     proid:{
         type:String
      },
-    name: {
-        type:String,
-        maxlength:200
-    },
-    
-    price: {
-        type: String,
-        
-    },
-    discount: {
-        type:Number,
-        
-    },
+      name:{
+        type:String
+     },
+      brand:{
+        type:String
+     },
+   
     colors:{
         type:Array
     },
-    detail:{
+  
+    count:{
+        type:Number
+    },
+    existnumber:{
+        type:Number
+    },
+    describe:{
         type:String
     },
     type:{
         type:String
     },
+    colorselected:{
+        type:String
+    },
+    garanty:{
+        type:String
+    },
+    
+    tecnicalinfo:[{
+        name:String,
+        value:String
+          }]
+          ,comment:[
+              {
+                  username:String,
+                  mssagess:String
+                    } 
+          ]    ,
     brifinfo:{
         proid:{
             type:String
@@ -45,8 +63,22 @@ const productSchema = mongoose.Schema({
         }
 
 
+        
+
     }
 },{timestamps:true})
+productSchema.index({
+    name:'text',
+    brand:'text',
+    type:'text'
+},{
+    weights:{
+        name:5,
+        brand:3,
+        type:3
+    }
+
+})
 
 
 
