@@ -22,6 +22,32 @@ const productSchema = mongoose.Schema({
     existnumber:{
         type:Number
     },
+    
+    solded:{
+        type:Number
+    },
+ 
+   
+    rating:{
+        type:Number
+    },
+    
+    price:{
+        type:Number
+    },
+    
+    priceafter:{
+        type:Number
+    },
+    discount:{
+        type:Number
+    },
+    offer:{
+type:Boolean
+    }
+ ,
+ 
+ 
     describe:{
         type:String
     },

@@ -9,7 +9,7 @@ const router = express.Router();
 router.post("/SetProduct",async(req, res) => {
   try{
     
-    const {name,existnumber,garanty,brand,tecnicalinfo,images,price,discount,color,discribe,type}=req.body;
+    const {name,solded,priceafter,existnumber,garanty,brand,tecnicalinfo,images,price,discount,color,discribe,type}=req.body;
     console.log(name,price,color);
  console.log(uuidv4());
  let proid=uuidv4();
@@ -17,9 +17,13 @@ router.post("/SetProduct",async(req, res) => {
     proid:proid,
     name:name,
     count:1,
+    priceafter:priceafter,
+    price:price,
+    discount:discount,
     existnumber:existnumber,
     colorselected:"",
     garanty:garanty,
+    solded:solded,
     brand:brand,
     price:price,
     discount:discount,
@@ -55,14 +59,26 @@ router.post("/GetproductbyType",async(req, res) => {
     try{
     const {type}=req.body;
     console.log(type);
-    const product= await Product.find({type:type});
+    let {sort}=req.body;
+    console.log(sort);
+    let sortterm;
+    if(sort!==undefined){
+if(sort=="pricedown"){
+sortterm=[['priceafter',1]]
+  
+}else{
+  sortterm=[[sort,-1]]
+}
+console.log(  sortterm)
+    }
+    const product= await Product.find({type:type}).sort(sortterm);
     
           if (product==null){
             console.log("product not found");
                     res.status(400).json({mss:"این نام کاربری وجود ندارد"});
           }else{
             console.log("product  found");
-            console.log(product);
+            console.log(product[0])
             const mypro=[];
             for(let i=0;i<product.length;i++){
 mypro.push(product[i].brifinfo);
