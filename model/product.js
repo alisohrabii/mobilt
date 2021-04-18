@@ -11,43 +11,32 @@ const productSchema = mongoose.Schema({
       brand:{
         type:String
      },
-   
     colors:{
         type:Array
     },
-  
     count:{
         type:Number
     },
     existnumber:{
         type:Number
     },
-    
     solded:{
         type:Number
     },
- 
-   
     rating:{
         type:Number
     },
-    
     price:{
         type:Number
     },
-    
-    priceafter:{
-        type:Number
+    isparcham:{
+        type:String
     },
+    
+    
     discount:{
         type:Number
     },
-    offer:{
-type:Boolean
-    }
- ,
- 
- 
     describe:{
         type:String
     },
@@ -59,6 +48,9 @@ type:Boolean
     },
     garanty:{
         type:String
+    },
+    priceafter:{
+        type:Number
     },
     
     tecnicalinfo:[{
@@ -72,9 +64,25 @@ type:Boolean
                     } 
           ]    ,
     brifinfo:{
-        proid:{
+        
+    engname:{
+        type:String
+    },
+    proid:{
             type:String
          },
+     offer:{
+            type:Boolean
+        },
+        priceafter:{
+            type:Number
+        },
+        gift:{
+            type:String
+        },
+        likes:{
+            type:String
+        },
          name:{
             type:String
          },
@@ -86,10 +94,7 @@ type:Boolean
         },
          images:{
             type:Array
-        }
-
-
-        
+         }
 
     }
 },{timestamps:true})

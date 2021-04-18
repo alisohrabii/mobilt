@@ -9,15 +9,14 @@ const router = express.Router();
 router.post("/SetProduct",async(req, res) => {
   try{
     
-    const {name,solded,priceafter,existnumber,garanty,brand,tecnicalinfo,images,price,discount,color,discribe,type}=req.body;
+    const {name,likes,gift,offer,engname,parcham,solded,priceafter,existnumber,garanty,brand,tecnicalinfo,images,price,discount,color,discribe,type}=req.body;
     console.log(name,price,color);
  console.log(uuidv4());
  let proid=uuidv4();
   const newproduct= new Product({
     proid:proid,
-    name:name,
     count:1,
-    priceafter:priceafter,
+    isparcham:parcham,
     price:price,
     discount:discount,
     existnumber:existnumber,
@@ -25,6 +24,7 @@ router.post("/SetProduct",async(req, res) => {
     garanty:garanty,
     solded:solded,
     brand:brand,
+    priceafter:priceafter,
     price:price,
     discount:discount,
     colors:color,
@@ -32,9 +32,15 @@ router.post("/SetProduct",async(req, res) => {
     type:type,
     brifinfo:{
 proid:proid,
+likes:likes,
+gift:gift,
+priceafter:priceafter,
+offer:offer,
 name:name,
+engname:engname,
 price:price,
 discount:discount,
+existnumber:existnumber,
 images:images
     },
     tecnicalinfo:tecnicalinfo
@@ -57,8 +63,15 @@ images:images
 
 router.post("/GetproductbyType",async(req, res) => {
     try{
+      var brands=["شیائومی","سامسونگ","الجی","لنوو","هوآوی","بلک بری","اپل","اچ تی سی"]
+  
     const {type}=req.body;
-    console.log(type);
+    if (brands.includes(type)){
+var termfind={brand:type}
+    }else if(type="پرچمدار"){
+      var termfind={isparcham:type} 
+    }
+  
     let {sort}=req.body;
     console.log(sort);
     let sortterm;
@@ -71,7 +84,7 @@ sortterm=[['priceafter',1]]
 }
 console.log(  sortterm)
     }
-    const product= await Product.find({type:type}).sort(sortterm);
+    const product= await Product.find(termfind).sort(sortterm).limit(12);
     
           if (product==null){
             console.log("product not found");
