@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const Product = require('./model/product');
 const config = require("./config/keys");
-
+const path=require('path');
 //require("dotenv").config();
 const mongoose = require("mongoose");
 
