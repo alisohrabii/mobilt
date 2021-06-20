@@ -10,7 +10,7 @@ router.post("/SetProduct",async(req, res) => {
   try{
     
     const {name,likes,gift,offer,engname,parcham,solded,priceafter,existnumber,garanty,brand,tecnicalinfo,images,price,discount,color,discribe,type}=req.body;
-    console.log(name,price,color);
+    console.log(tecnicalinfo);
  console.log(uuidv4());
  let proid=uuidv4();
   const newproduct= new Product({
@@ -63,13 +63,14 @@ images:images
 
 router.post("/GetproductbyType",async(req, res) => {
     try{
-      var brands=["شیائومی","سامسونگ","الجی","لنوو","هوآوی","بلک بری","اپل","اچ تی سی"]
+      var brands=["شیائومی","سامسونگ","نوکیا","لنوو","هوآوی","بلک بری","اپل","اچ تی سی"]
   
     const {type}=req.body;
     if (brands.includes(type)){
 var termfind={brand:type}
-    }else if(type="پرچمدار"){
+    }else if(type=="پرچمدار"){
       var termfind={isparcham:type} 
+      
     }
   
     let {sort}=req.body;

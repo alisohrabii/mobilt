@@ -37,9 +37,12 @@ const productSchema = mongoose.Schema({
     discount:{
         type:Number
     },
-    describe:{
-        type:String
-    },
+    discribe:[{
+        name:String,
+        value:String,
+        image:String
+          }]
+          ,
     type:{
         type:String
     },
@@ -55,7 +58,8 @@ const productSchema = mongoose.Schema({
     
     tecnicalinfo:[{
         name:String,
-        value:String
+        value:String,
+        brnch:String
           }]
           ,comment:[
               {
