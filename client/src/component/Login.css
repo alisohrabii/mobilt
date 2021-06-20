@@ -1,0 +1,220 @@
+.center-box {
+    max-width: 1300px;
+    background-color:white;
+    width: 100%;
+    margin: 40px auto;
+    border-radius: 10px;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    position: relative;
+    line-height: 200%;
+    direction: rtl;
+}
+.sign-in {
+    border-right: 1px solid #7f7f7f;
+    text-align: center;
+}
+
+.center-box .form {
+    margin: 10px 6% 0 0;
+}
+.center-box input {
+    display: block;
+    height: 27px;
+    border-bottom: 1px solid hsla(24, 86%, 51%, 0.849);
+    box-shadow: none;
+    width: 100%;
+    padding-right: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #464646;
+    position: relative;
+    top: -12px;
+    transition: ease-in-out 0.4s !important;
+    height: 40px;
+}
+.center-box label{
+    text-align: right;
+padding-right: 10px;
+    display: block;
+}
+
+input {
+    font-family: iranyekan;
+}
+.ness::after {
+    content: "*";
+    color: red;
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+.center-box input[type=text]:focus, .center-box input[type=password]:focus, .center-box input[type=number]:focus {
+    background-color: initial;
+    border: none;
+    border-top-color: initial;
+    border-top-style: none;
+    border-top-width: initial;
+    border-right-color: initial;
+    border-right-style: none;
+    border-right-width: initial;
+    border-bottom-color: rgb(255, 106, 0);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-left-color: initial;
+    border-left-style: none;
+    border-left-width: initial;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    box-shadow: none;
+    color: inherit;
+    border-bottom: 2px solid #4EB3C1;
+}
+:focus {
+    outline: 0;
+    outline-color: initial;
+    outline-style: initial;
+    outline-width: 0px;
+}
+button {
+    appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+
+input:focus {
+    outline-offset: 0px;
+}
+.login{
+width:60% ;
+margin: 50px auto;
+}
+
+.input-section{
+position: relative;
+
+height: 80px;
+}
+
+.input-section input{
+    position: absolute;
+    font-size: 18px;
+    padding:0 30px 0 0;
+    font-family: Ali;
+    }
+.input-section img{
+    position: absolute;
+    z-index: 2;
+    top:6px;
+    opacity: 0.23;
+    right: 3px;
+    }
+    
+    .center-box input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgba(8, 189, 189, 0.356);
+        font-size: 14px;
+        opacity: 1; /* Firefox */
+      }
+      
+      .center-box input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: rgb(179, 174, 174);
+      }
+      
+      .center-box input::-ms-input-placeholder { /* Microsoft Edge */
+        color: rgb(189, 185, 185);
+      }
+      .login-form{
+
+display: flex;
+margin: 2px 2px 100px 2px;
+      }
+      .login-image{
+        display: none;
+        margin: 2px 7px;
+    }
+
+
+
+      @media screen and (min-width: 690px) {
+      .login-image{
+          display: block;
+      }
+      .login{
+
+        width: 49%;
+      }
+      }
+      .button-container{
+          display: flex;
+          background-color: cadetblue;
+          width: 120px;
+          height: 40px;
+cursor: pointer;
+      }
+      .button-container div{
+        margin:auto 12px auto auto;
+        font-size: 19px;
+        padding-right: 0px;
+        border: none;
+        font-family: Ali;
+        
+        background-color: inherit;
+      }
+    
+    
+    .button-container img{
+margin: auto 11px auto 0px;
+    opacity: 0.4;
+    }
+    .changepage{
+
+display: flex;
+margin-top: 5px;
+    }
+    .changepage>p:first-child{
+    
+        color: rgb(22, 14, 8);
+        font-size: 12px;
+            }
+            .changepage>p:nth-child(2){
+                cursor: pointer;
+                color: rgb(75, 211, 235);
+                font-size: 12px;
+                margin-right: 6px;
+                
+                    }
+.err-mssage{
+color:rgb(255, 177, 59);
+font-size: 12px;
+}
+.llo{
+    color: rgb(236, 91, 91);
+    font-family: Ali;
+}

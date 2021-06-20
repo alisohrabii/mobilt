@@ -1,0 +1,88 @@
+
+.login-container{
+    position: relative;
+    height:100vh;
+    }
+    .input-box input{
+    padding:2px;
+   border:1px solid rgb(152,152,152);
+    height:38px;
+    width:300px;
+    border-radius:6px;
+    }
+  .input-box input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    }
+  .input-box input:focus::-moz-placeholder {
+    opacity: 0;
+    }
+    
+   .input-box input:focus:-ms-input-placeholder {
+    opacity: 0;
+    }
+    
+   .input-box input:focus:-moz-placeholder {
+    opacity: 0;
+    }
+    .input-box input:focus{
+    direction:ltr;
+  text-align:left;
+   border:1px solid rgb(8,152,132);
+    box-shadow:0 1px 2px rgb(8,152,132,0.2);
+    }
+   .input-box2 input{
+    padding:2px;
+     border:1px solid rgb(152,152,152);
+    height:38px;
+    width:300px;
+    border-radius:6px;
+    }
+    .input-box2 input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    }
+    .input-box2 input:focus::-moz-placeholder {
+    opacity: 0;
+    }
+    
+     .input-box2 input:focus:-ms-input-placeholder {
+    opacity: 0;
+    }
+    
+     .input-box2 input:focus:-moz-placeholder {
+    opacity: 0;
+    }
+    .input-box2 input:focus{
+    direction:rtl;
+    
+     border:1px solid rgb(8,152,132);
+    box-shadow:0 1px 2px rgb(222,222,222);
+    }
+    
+    .sign-up{
+    display:none;
+    }
+   .input-box::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+    }
+    
+    .input-box::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+    }
+    
+    .input-box::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+    }
+    .btn-1{
+    color:white;
+    text-align:center;
+  border:1px solid transparent;
+    background-color:rgb(8,152,132);
+    border-radius:1px;
+    }
+    .btn-2{
+    text-align:center;
+    border:1px solid rgb(152,152,152);
+    
+    border-radius:1px;
+    }
