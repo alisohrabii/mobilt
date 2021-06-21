@@ -111,7 +111,7 @@ render(){
                 }}>
      
                           <div className="product-item-in">
-                               <div ><img src={`http://localhost:8088/${images[0]}`} className='product-image'/></div>
+                               <div ><img src={`http://mobilt.herokuapp.com/${images[0]}`} className='product-image'/></div>
                                   
   
                               <div className='product-item-name'>{name}</div>

@@ -36,7 +36,7 @@ const  ProductContextProvider = (props) => {
            cart:cart
           };
            console.log(data);
-      const CartsetAction=await Axios.post("http://localhost:8088/users/setcart",data);
+      const CartsetAction=await Axios.post("http://mobilt.herokuapp.com/users/setcart",data);
       if(CartsetAction.status==200){
         
          props.history.push('/cart2');
@@ -126,7 +126,7 @@ setCart([...newtempcart]);
            data={
             type:item};
          }
-    const GetproductbyType=await Axios.post("http://localhost:8088/product/GetproductbyType",data);
+    const GetproductbyType=await Axios.post("http://mobilt.herokuapp.com/product/GetproductbyType",data);
 
 
  
@@ -159,7 +159,7 @@ const handelProductDetail=(proid)=>{
   const tryfetch=async()=>{
     try{ const data={
          proid:proid};
-    const GetproductDetail=await Axios.post("http://localhost:8088/product/GetproductDetail",data);
+    const GetproductDetail=await Axios.post("http://mobilt.herokuapp.com/product/GetproductDetail",data);
     console.log(GetproductDetail.data.product[0]);
     setProductDetail(GetproductDetail.data.product[0]);
 

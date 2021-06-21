@@ -31,7 +31,7 @@ for (let i=0; i<100;i++) {
                 <div key={proid} className='productshow-items'  onClick={()=>{handelProductDetail(proid);
                 props.history.push('/Productdetail');
                            }} >
-                      <div style={{padding:'15px'}} ><img width="180px" height="180px" src={`http://localhost:8088/${item.images[0]}`}/></div>
+                      <div style={{padding:'15px'}} ><img width="180px" height="180px" src={`http://mobilt.herokuapp.com/${item.images[0]}`}/></div>
                         <div className='productshow-items-info'>
                             <div style={{fontSize:"14px", color:"rbg(166,166,166s)",direction:"rtl"}} >{item.name}</div>
                             <div style={{fontSize:"13px", color:"rbg(166,166,166s)"}}>

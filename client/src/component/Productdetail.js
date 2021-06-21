@@ -72,7 +72,7 @@ document.getElementById('describe').style.backgroundColor="white";
 componentDidMount(){
 
 
-    Axios.post("http://localhost:8088/product/GetproductbyType",{type:'شارژر'}).then(res=>{
+    Axios.post("http://mobilt.herokuapp.com/product/GetproductbyType",{type:'شارژر'}).then(res=>{
     console.log(res);
         if(res.status==200){
            this.setState({SimProduct:res.data.mypro});
@@ -114,7 +114,7 @@ componentDidMount(){
                     <Carousel>
                 {unicproduct.brifinfo.images.map(item=>{
 return(<div>
-    <img src={`http://localhost:8088/${item}`} />
+    <img src={`http://mobilt.herokuapp.com/${item}`} />
 </div>)
                 })}   
             </Carousel>

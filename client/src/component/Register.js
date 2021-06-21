@@ -32,9 +32,9 @@ const Register = (props) => {
     const tryfetch=async()=>{
         try{
         const data={email:email,password:password,mobnumber:mobnumber,name:name,lastname:lastname}
-        const registerAction=await Axios.post("http://localhost:8088/users/register",data);
+        const registerAction=await Axios.post("http://mobilt.herokuapp.com/users/register",data);
         if(registerAction.status==200){
-            const loginAction=await Axios.post("http://localhost:8088/users/login",data);
+            const loginAction=await Axios.post("http://mobilt.herokuapp.com/users/login",data);
             if(loginAction.status==200){console.log(loginAction.data);
                 localStorage.setItem('hitoken',loginAction.data.token);
                 setUserinfo({user:loginAction.data.user,token:loginAction.data.token});

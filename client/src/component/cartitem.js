@@ -12,7 +12,7 @@ import { MiunsIcon, PluseIcon, TrashIcon } from '../util/Icons';
                
               
                      <div className=" ">
-                        <img src={`http://localhost:8088/${brifinfo.images[0]}`} width='100px'/>
+                        <img src={`http://mobilt.herokuapp.com/${brifinfo.images[0]}`} width='100px'/>
                      </div>
                      
                      

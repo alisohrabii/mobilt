@@ -96,7 +96,7 @@ const config={
     header:{"content-type":"multipart/form-data"}
 }
 formdata.append("file",files[0]);
-Axios.post("http://localhost:8088/product/UploadProductImage",formdata,config).then(
+Axios.post("http://mobilt.herokuapp.com/product/UploadProductImage",formdata,config).then(
   response =>{
 if(response.data.success){
 setImages([...images,response.data.image]);
@@ -141,7 +141,7 @@ let priceafter=(price*(100-discount))/100;
              type:type};
 
              console.log(data);
-        const registerAction=await Axios.post("http://localhost:8088/product/Setproduct",data);
+        const registerAction=await Axios.post("http://mobilt.herokuapp.com/product/Setproduct",data);
         console.log(registerAction);
              }catch(err){
 if(err.response){
@@ -215,7 +215,7 @@ if (validation()==true){
              <div style={{display:'flex',overflow:"scroll",width:"450px"}} className="dropzone-two">
              {images.map((image,index)=>(
                  <div >
-                 <img src={`http://localhost:8088/${image}`} style={{width:"200px ",height:'200px',minWidth:"300px"}}/>
+                 <img src={`http://mobilt.herokuapp.com/${image}`} style={{width:"200px ",height:'200px',minWidth:"300px"}}/>
 
                  </div>
 

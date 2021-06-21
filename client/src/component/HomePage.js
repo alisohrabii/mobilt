@@ -15,7 +15,7 @@ const placeholderSrc = (width, height) => `data:image/svg+xml,%3Csvg xmlns="http
 const HomePage=(props)=> {
   const {settype,handelProductDetail}=useContext(ProductContext);
    
-    const images=["http://localhost:8088/uploads/photo1.webp","http://localhost:8088/uploads/photo2.webp","http://localhost:8088/uploads/photo3.jpg","http://localhost:8088/uploads/photo1.webp"]
+    const images=["http://mobilt.herokuapp.com/uploads/photo1.webp","http://mobilt.herokuapp.com/uploads/photo2.webp","http://mobilt.herokuapp.com/uploads/photo3.jpg","http://mobilt.herokuapp.com/uploads/photo1.webp"]
     const [ParchamProduct, setParchamProduct] = useState([]);
     const [XiomieProduct, setXiomieProduct] = useState([]);
     const [HuawieProduct, setHuawieProduct] = useState([]);
@@ -23,22 +23,22 @@ const HomePage=(props)=> {
     
     
       useEffect(()=>{
- Axios.post("http://localhost:8088/product/GetproductbyType",{type:"اپل"}).then(res=>{
+ Axios.post("http://mobilt.herokuapp.com/product/GetproductbyType",{type:"اپل"}).then(res=>{
 
 if(res.status==200){ setAppleProduct(res.data.mypro)}
  })
  
- Axios.post("http://localhost:8088/product/GetproductbyType",{type:"شیائومی"}).then(res=>{
+ Axios.post("http://mobilt.herokuapp.com/product/GetproductbyType",{type:"شیائومی"}).then(res=>{
 
 if(res.status==200){ setXiomieProduct(res.data.mypro)}
  })
  
- Axios.post("http://localhost:8088/product/GetproductbyType",{type:"هوآوی"}).then(res=>{
+ Axios.post("http://mobilt.herokuapp.com/product/GetproductbyType",{type:"هوآوی"}).then(res=>{
 
 if(res.status==200){ setHuawieProduct(res.data.mypro)}
  })
  
- Axios.post("http://localhost:8088/product/GetproductbyType",{type:"پرچمدار"}).then(res=>{
+ Axios.post("http://mobilt.herokuapp.com/product/GetproductbyType",{type:"پرچمدار"}).then(res=>{
 
 if(res.status==200){ setParchamProduct(res.data.mypro)}
  })
@@ -58,10 +58,10 @@ if(res.status==200){ setParchamProduct(res.data.mypro)}
                     <div className='part-one-first-down'>
                            <div className='box-shadow' onClick={()=>{settype('فلش مموری');
                                                                      props.history.push('/Product');
-                                                                                }} ><img src='http://localhost:8088/uploads/photo4.webp'/></div>
+                                                                                }} ><img src='http://mobilt.herokuapp.com/uploads/photo4.webp'/></div>
                            <div className='box-shadow'  onClick={()=>{handelProductDetail('Apple 4C id ');
                                                                      props.history.push('/Productdetail');
-                                                                                }} ><img src='http://localhost:8088/uploads/photo5.webp'/></div>
+                                                                                }} ><img src='http://mobilt.herokuapp.com/uploads/photo5.webp'/></div>
                                                    
                     </div>
                 </div>
@@ -71,7 +71,7 @@ if(res.status==200){ setParchamProduct(res.data.mypro)}
                                                                                 }}><img src='http://mobilt.herokuapp.com/uploads/photo9.webp'/> </div>
                     <div className='part-one-secound-down box-shadow'   onClick={()=>{settype('','solded');
                                                                      props.history.push('/Product');
-                                                                                }}><img src='http://localhost:8088/uploads/photo-left-down.jpg'/></div>
+                                                                                }}><img src='http://mobilt.herokuapp.com/uploads/photo-left-down.jpg'/></div>
 
 
 

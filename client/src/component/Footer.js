@@ -76,9 +76,9 @@ const Footer = () => {
 
   
  <div className="footer-images">
- <img width='170px' src='http://localhost:8088/uploads/footer-1.png'/>
- <img  width='170px' src='http://localhost:8088/uploads/footer-2.png'/>
- <img  width='170px' src='http://localhost:8088/uploads/footer-3.png'/>
+ <img width='170px' src='http://mobilt.herokuapp.com/uploads/footer-1.png'/>
+ <img  width='170px' src='http://mobilt.herokuapp.com/uploads/footer-2.png'/>
+ <img  width='170px' src='http://mobilt.herokuapp.com/uploads/footer-3.png'/>
      </div>
   
 <div style={{marginTop:'12px'}}>
