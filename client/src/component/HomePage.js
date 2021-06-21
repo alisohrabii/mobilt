@@ -68,7 +68,7 @@ if(res.status==200){ setParchamProduct(res.data.mypro)}
                 <div className='part-one-secound'>
                 <div className='part-one-secound-up box-shadow'   onClick={()=>{handelProductDetail('hawiee 4c id ');
                                                                      props.history.push('/Productdetail');
-                                                                                }}><img src='http://localhost:8088/uploads/photo9.webp'/> </div>
+                                                                                }}><img src='http://mobilt.herokuapp.com/uploads/photo9.webp'/> </div>
                     <div className='part-one-secound-down box-shadow'   onClick={()=>{settype('','solded');
                                                                      props.history.push('/Product');
                                                                                 }}><img src='http://localhost:8088/uploads/photo-left-down.jpg'/></div>
