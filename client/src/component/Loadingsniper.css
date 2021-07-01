@@ -11,9 +11,9 @@ width: 100%;
     background-color:rgb(247, 247, 247);
 
 border-radius: 12px;
-border:2px solid rgb(135, 209, 174);
+border:2px solid rgb(35, 106, 134);
 margin: auto auto;
-
+padding-bottom: 22px;
 width:250px ;
 height: 150px;
 
@@ -36,7 +36,7 @@ height: 130px;
     margin:12px 0 0 20px;
     border: 8px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 8px solid #73dab2;
+    border-top: 8px solid rgb(53, 132, 179);
     width: 30px;
     height: 30px;
     -webkit-animation: spin 1.5s linear infinite; /* Safari */

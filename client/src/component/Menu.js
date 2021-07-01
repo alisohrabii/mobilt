@@ -9,11 +9,11 @@ const Menu = (props) => {
 const myref=useRef(null);
   const handleshow=()=>{
     const elem=document.getElementById('menuitems');
-    elem.style.right="0";
+    elem.style.right="0px";
       }
       const handlClose=()=>{
         const elem=document.getElementById('menuitems');
-        elem.style.right="-100%";
+        elem.style.right="300px";
 
       }
 

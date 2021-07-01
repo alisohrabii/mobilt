@@ -1,7 +1,11 @@
 import React,{useContext} from 'react';
 import {ProductContext} from '../context/ProductContext'
 
-import Menu from './Menu';
+import Menuitem from './Menuitem';
+import './menu.css';
+import { MenuIcon } from '../util/Icons';
+
+
 import {withRouter} from 'react-router-dom';
 import {DiscountIcon2,HuawieIcon,AppleIcon,SumsungIcon,XaiomiIcon,HtcIcon,LgIcon} from '../util/Icons';
 import './navdown.css';
@@ -9,6 +13,15 @@ var IconsColor='rgb(140,140,140)'
 const Navdown = (props) => {
     const {settype,setProduct}=useContext(ProductContext);    
 
+    const handleshow=()=>{
+      const elem=document.getElementById('menuitems2');
+      elem.style.right="0px";
+        }
+        const handlClose=()=>{
+          const elem=document.getElementById('menuitems2');
+          elem.style.right="-100%";
+  
+        }
     const  handlSearch=(childdata)=>{
 
     
@@ -29,7 +42,13 @@ const Navdown = (props) => {
     return (<div className='navdown-main-con' >
       
       <div style={{margin:'10px 15px'}}>
-      <Menu  iconsize="20px"/>
+      
+   <div className="menu-main">
+    <div style={{display:'flex',margin:'5px 0 0 0'}} onClick={handleshow}><div style={{margin:'0px 0 0 0'}}><MenuIcon width="33px" color="rgb(163,163,163)"/> </div></div>
+    <div id='menuitems2'>
+    <Menuitem  handleParentClose={handlClose} />
+    </div>
+    </div>
       </div>
        <div className='navdown-con nnj '>
 

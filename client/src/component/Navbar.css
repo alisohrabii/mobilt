@@ -51,10 +51,25 @@ display: flex;
 margin-top: 2px;
 margin-right: 11px;
     cursor: pointer;
+    color:black;
     height: 40px;
     margin-right: auto;
     margin-left: 6px;
 }
+
+
+.login-register2{
+    opacity: 0.4;
+    display: flex;
+    margin-top: 9px;
+    margin-right: 11px;
+        cursor: pointer;
+        color:black;
+        height: 40px;
+        margin-right: auto;
+        margin-left: 6px;
+        text-decoration: none;
+    }
 .search-cont{
 width: 55%;
 display: none;

@@ -16,7 +16,7 @@ const Footer = () => {
                     
                     <div  className="footer-first-section">
                     <div ><div>شماره تماس</div><div><PhoneIcon color='rgb(146, 150, 150)' width="20px"/></div></div>
-                      <div>0918-3384566</div>
+                      <div>0901-2075840</div>
                     </div>
 
                     <div className="footer-first-section">

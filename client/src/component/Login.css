@@ -173,9 +173,11 @@ margin: 2px 2px 100px 2px;
       }
       .button-container{
           display: flex;
-          background-color: cadetblue;
+          background-color:rgb(44, 125, 172);
           width: 120px;
           height: 40px;
+          border-radius: 11px;
+          color:rgb(255, 255, 255);
 cursor: pointer;
       }
       .button-container div{
@@ -184,7 +186,7 @@ cursor: pointer;
         padding-right: 0px;
         border: none;
         font-family: Ali;
-        
+        color: rgb(255, 255, 255);
         background-color: inherit;
       }
     

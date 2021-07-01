@@ -103,7 +103,6 @@ setImages([...images,response.data.image]);
 console.log([...images,response.data.image])
   }else{
 
-alert("image doesnt saved ")
 
     }}
 )

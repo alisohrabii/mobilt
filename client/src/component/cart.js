@@ -18,7 +18,7 @@ import './cart.css';
                          <div className="cartpagetotal">  <Carttotal value={value}/></div>
                      </div>
         )}else{
-          alert("okkkkkk");
+         
           return(<div className="cartpage"><div className="cartpagelist"   ><span style={{fontSize:"33px" ,color:"gray"}}>هیچ کالایی در سبد خرید شما موجود نیست</span></div></div>)
         }
        }}
